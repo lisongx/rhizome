@@ -139,7 +139,7 @@ module.exports = function(config, done) {
     {
       webPort: function(val) {
         expect(val).to.be.a('number')
-        expect(val).to.be.within(1025, 49150)
+        expect(val).to.equal(80) || expect(val).to.be.within(1025, 49150)
       },
 
       oscPort: function(val) {
